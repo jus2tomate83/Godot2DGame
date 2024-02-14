@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://bnwpfa05to1ae"]
+[gd_scene load_steps=2 format=3 uid="uid://bnwpfa05to1ae"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukivv"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ukivv")
