@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bkdw00abgywph"]
 
-[ext_resource type="Script" path="res://Player/Player_Script.gd" id="1_4yri8"]
+[ext_resource type="Script" path="res://Assets/Mob/Player/Player_Script.gd" id="1_4yri8"]
 [ext_resource type="Texture2D" uid="uid://bscy5wksj5oka" path="res://Assets/Assets_Character/Player/idle.png" id="1_angme"]
 [ext_resource type="Texture2D" uid="uid://ckkgpxhg4mecw" path="res://Assets/Assets_Character/Player/run.png" id="2_egqc1"]
 
@@ -83,3 +83,4 @@ shape = SubResource("RectangleShape2D_6732i")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(6.855, 6.855)
+position_smoothing_enabled = true

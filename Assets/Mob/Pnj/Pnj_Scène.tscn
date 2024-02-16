@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://gdaviexqyn13"]
+
+[ext_resource type="Script" path="res://Assets/Mob/Pnj/Pnj_Script.gd" id="1_r276k"]
+
+[sub_resource type="Curve2D" id="Curve2D_s3gpe"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_r276k")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_s3gpe")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
