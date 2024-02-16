@@ -2,7 +2,7 @@ extends CharacterBody2D
 @export var speed = 200
 var direction = 1
 
-onready var path_follow = $Path2D/PathFollow2D
+@onready var path_follow = $Path2D/PathFollow2D
 
 func _physics_process(delta):
 	path_follow.offset += speed * delta * direction
