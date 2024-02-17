@@ -1,6 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://qoejkjew43r4"]
+[gd_scene load_steps=4 format=3 uid="uid://qoejkjew43r4"]
 
-[ext_resource type="PackedScene" uid="uid://bcgeppttxne2n" path="res://Mob/Pnj/PnjPathFollow/Pnj_PathFollow.tscn" id="1_7wnwr"]
 [ext_resource type="Script" path="res://Mob/Pnj/PnjPathFollow/CharacterFollower2D.gd" id="2_04cn2"]
 [ext_resource type="PackedScene" uid="uid://87xgskjsoi1p" path="res://Mob/Pnj/PnjSprite/Pnj.tscn" id="3_em2no"]
 
@@ -12,25 +11,20 @@ point_count = 6
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_7wnwr")]
+[node name="Pnj" type="Node" parent="."]
 
-[node name="CharacterFollower2D" parent="Node2D/Path2D" index="0"]
-position = Vector2(206.773, 240.36)
-
-[node name="Node" type="Node" parent="."]
-
-[node name="Path2D" type="Path2D" parent="Node"]
+[node name="Path2D" type="Path2D" parent="Pnj"]
+texture_filter = 1
+position = Vector2(-6, -30)
 curve = SubResource("Curve2D_r5amc")
 
-[node name="CharacterFollower2D" type="PathFollow2D" parent="Node/Path2D"]
+[node name="CharacterFollower2D" type="PathFollow2D" parent="Pnj/Path2D"]
 position = Vector2(853.409, 396.795)
 rotation = 2.10135
 progress = 10.76
 rotates = false
 script = ExtResource("2_04cn2")
 
-[node name="Node2D" parent="Node/Path2D/CharacterFollower2D" instance=ExtResource("3_em2no")]
+[node name="Node2D" parent="Pnj/Path2D/CharacterFollower2D" instance=ExtResource("3_em2no")]
 position = Vector2(0.943479, 0.343032)
 rotation = 4.26384
-
-[editable path="Node2D"]

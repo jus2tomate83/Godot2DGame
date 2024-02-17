@@ -9,14 +9,15 @@ _data = {
 }
 point_count = 11
 
-[node name="Node2D" type="Node2D"]
+[node name="Pnj" type="Node2D"]
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource("Curve2D_2es0i")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(158.707, 205.432)
+position = Vector2(206.773, 240.36)
 rotation = 2.10135
+scale = Vector2(1, 1)
 progress = 10.76
 rotates = false
 script = ExtResource("1_0xe8w")
