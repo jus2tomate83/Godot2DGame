@@ -1,34 +1,41 @@
-[gd_scene load_steps=8 format=3 uid="uid://87xgskjsoi1p"]
+[gd_scene load_steps=9 format=3 uid="uid://87xgskjsoi1p"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/PNJ.gd" id="1_0wt4j"]
-[ext_resource type="Texture2D" uid="uid://bscy5wksj5oka" path="res://Assets/Assets_Character/Player/idle.png" id="1_7qpni"]
+[ext_resource type="Texture2D" uid="uid://dt5hynfiwogm8" path="res://Assets/Assets_Character/Pnj/Pnj/Sprites/Prototype/Prototype_Worksheet.png" id="2_6fpsq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_07250"]
-atlas = ExtResource("1_7qpni")
-region = Rect2(0, 0, 34, 21)
+[sub_resource type="AtlasTexture" id="AtlasTexture_w177s"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(0, 128, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_54yma"]
-atlas = ExtResource("1_7qpni")
-region = Rect2(34, 0, 34, 21)
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt6bj"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(32, 128, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wvsel"]
-atlas = ExtResource("1_7qpni")
-region = Rect2(68, 0, 34, 21)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ai3y1"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gnni6"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(96, 128, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dxvot"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_07250")
+"texture": SubResource("AtlasTexture_w177s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_54yma")
+"texture": SubResource("AtlasTexture_wt6bj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wvsel")
+"texture": SubResource("AtlasTexture_ai3y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gnni6")
 }],
 "loop": true,
-"name": &"default",
+"name": &"Droite",
 "speed": 5.0
 }]
 
@@ -45,6 +52,7 @@ script = ExtResource("1_0wt4j")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_dxvot")
+animation = &"Droite"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(0, 7)

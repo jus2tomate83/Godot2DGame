@@ -23,8 +23,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 	if velocity.length() > 0 and is_on_floor() :
+		$AnimatedSprite2D.flip_h= velocity.x < 0
+
 		$AnimatedSprite2D.play("run")
 	else :
 		$AnimatedSprite2D.play("idle")
 	if velocity.x !=0 :
-		$AnimatedSprite2D.flip_h= velocity.x < 0

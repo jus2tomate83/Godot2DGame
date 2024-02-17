@@ -5,22 +5,24 @@
 
 [sub_resource type="Curve2D" id="Curve2D_2es0i"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 199, 233, 0, 0, 0, 0, 293, 322, 0, 0, 0, 0, 384, 446, 0, 0, 0, 0, 530, 317, 0, 0, 0, 0, 611, 160, 0, 0, 0, 0, 465, 198, 0, 0, 0, 0, 304, 177, 0, 0, 0, 0, 403, 324, 0, 0, 0, 0, 472, 276, 0, 0, 0, 0, 67, 129, 0, 0, 0, 0, 219, 393)
+"points": PackedVector2Array(0, 0, 0, 0, 199, 233, 0, 0, 0, 0, 304.319, 246.711, 0, 0, 0, 0, 417.803, 258.257, 0, 0, 0, 0, 599.937, 277.37, 0, 0, 0, 0, 741.437, 334.874, 0, 0, 0, 0, 688.122, 473.646, 0, 0, 0, 0, 446.986, 452.619, 0, 0, 0, 0, 290.791, 420.196, 0, 0, 0, 0, 182.76, 401.996)
 }
-point_count = 11
+point_count = 9
 
 [node name="Pnj" type="Node2D"]
 
 [node name="Path2D" type="Path2D" parent="."]
+position = Vector2(-28, -100)
+rotation = -0.0663225
 curve = SubResource("Curve2D_2es0i")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(206.773, 240.36)
+position = Vector2(209.631, 234.384)
 rotation = 2.10135
-scale = Vector2(1, 1)
 progress = 10.76
 rotates = false
 script = ExtResource("1_0xe8w")
 
 [node name="Node2D" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
+position = Vector2(1.65117, -0.66133)
 rotation = 4.26384
