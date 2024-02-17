@@ -1,0 +1,52 @@
+[gd_scene load_steps=8 format=3 uid="uid://87xgskjsoi1p"]
+
+[ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/PNJ.gd" id="1_0wt4j"]
+[ext_resource type="Texture2D" uid="uid://bscy5wksj5oka" path="res://Assets/Assets_Character/Player/idle.png" id="1_7qpni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_07250"]
+atlas = ExtResource("1_7qpni")
+region = Rect2(0, 0, 34, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54yma"]
+atlas = ExtResource("1_7qpni")
+region = Rect2(34, 0, 34, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvsel"]
+atlas = ExtResource("1_7qpni")
+region = Rect2(68, 0, 34, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dxvot"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_07250")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54yma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvsel")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g47na"]
+size = Vector2(10, 6)
+
+[node name="Pnj" type="Node2D"]
+scale = Vector2(1.63, 1.63)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(1.63, 1.63)
+script = ExtResource("1_0wt4j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+scale = Vector2(1.63, 1.63)
+sprite_frames = SubResource("SpriteFrames_dxvot")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 7)
+scale = Vector2(1.63, 1.63)
+shape = SubResource("RectangleShape2D_g47na")

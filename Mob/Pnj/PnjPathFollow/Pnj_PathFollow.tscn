@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcgeppttxne2n"]
+
+[ext_resource type="Script" path="res://Mob/Pnj/PnjPathFollow/CharacterFollower2D.gd" id="1_0xe8w"]
+[ext_resource type="PackedScene" uid="uid://87xgskjsoi1p" path="res://Mob/Pnj/PnjSprite/Pnj.tscn" id="2_itf15"]
+
+[sub_resource type="Curve2D" id="Curve2D_2es0i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 122, 51, 0, 0, 0, 0, 149, 210, 0, 0, 0, 0, 25, 25, 0, 0, 0, 0, 523, 34, 0, 0, 0, 0, 523, 34, 0, 0, 0, 0, 364, 154)
+}
+point_count = 6
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_2es0i")
+
+[node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(123.799, 61.5955)
+rotation = 2.10135
+progress = 10.76
+rotates = false
+script = ExtResource("1_0xe8w")
+
+[node name="Node2D" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
+rotation = 4.26384
