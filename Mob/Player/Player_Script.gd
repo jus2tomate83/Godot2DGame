@@ -28,4 +28,3 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("run")
 	else :
 		$AnimatedSprite2D.play("idle")
-	if velocity.x !=0 :

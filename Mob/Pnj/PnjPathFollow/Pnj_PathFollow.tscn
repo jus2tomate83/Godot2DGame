@@ -17,12 +17,12 @@ rotation = -0.0663225
 curve = SubResource("Curve2D_2es0i")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2(209.631, 234.384)
+position = Vector2(283.171, 243.958)
 rotation = 2.10135
-progress = 10.76
+progress = 84.8594
 rotates = false
 script = ExtResource("1_0xe8w")
 
-[node name="Node2D" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
+[node name="Pnj" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
 position = Vector2(1.65117, -0.66133)
 rotation = 4.26384
