@@ -10,10 +10,14 @@ func _ready():
 func _process(delta):
 	last_position = position[0]
 	set_progress(get_progress() + runSpeed*delta)
-	
 	if position[0] < last_position:
 			$Pnj/AnimatedSprite2D.flip_h = true
-
 	if position[0] > last_position:
 		$Pnj/AnimatedSprite2D.flip_h = false
+	if progress_ratio == 1:
+		while progress_ratio != 0:
+				set_progress(get_progress() - runSpeed*delta)
+
+
+
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bcgeppttxne2n"]
+[gd_scene load_steps=5 format=3 uid="uid://bcgeppttxne2n"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjPathFollow/CharacterFollower2D.gd" id="1_0xe8w"]
+[ext_resource type="Script" path="res://Mob/Pnj/PnjPathFollow/Path2D.gd" id="1_j2v7d"]
 [ext_resource type="PackedScene" uid="uid://87xgskjsoi1p" path="res://Mob/Pnj/PnjSprite/Pnj.tscn" id="2_itf15"]
 
 [sub_resource type="Curve2D" id="Curve2D_2es0i"]
@@ -15,6 +16,7 @@ point_count = 7
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-28, -100)
 curve = SubResource("Curve2D_2es0i")
+script = ExtResource("1_j2v7d")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
 texture_filter = 1
