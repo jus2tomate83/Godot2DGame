@@ -13,10 +13,10 @@ point_count = 9
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2(-28, -100)
-rotation = -0.0663225
 curve = SubResource("Curve2D_2es0i")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
+texture_filter = 1
 position = Vector2(283.171, 243.958)
 rotation = 2.10135
 progress = 84.8594
