@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://87xgskjsoi1p"]
+[gd_scene load_steps=10 format=3 uid="uid://87xgskjsoi1p"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/PNJ.gd" id="1_0wt4j"]
 [ext_resource type="Texture2D" uid="uid://dt5hynfiwogm8" path="res://Assets/Assets_Character/Pnj/Pnj/Sprites/Prototype/Prototype_Worksheet.png" id="2_6fpsq"]
+[ext_resource type="PackedScene" uid="uid://cj2brs1equcqf" path="res://Mob/Pnj/Telephone/Telephone.tscn" id="3_seejr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w177s"]
 atlas = ExtResource("2_6fpsq")
@@ -55,3 +56,8 @@ animation = &"Droite"
 position = Vector2(0, 7)
 scale = Vector2(1.63, 1.63)
 shape = SubResource("RectangleShape2D_g47na")
+
+[node name="Telephone" parent="." instance=ExtResource("3_seejr")]
+texture_filter = 1
+position = Vector2(7.97546, 4.57285)
+scale = Vector2(2.45399, 5.46472)

@@ -12,6 +12,8 @@ func _process(delta):
 	set_progress(get_progress() + runSpeed*delta)
 	if position[0] < last_position:
 			$Pnj/AnimatedSprite2D.flip_h = true
+			$Pnj/Telephone.translate(-10)
+			
 	if position[0] > last_position:
 		$Pnj/AnimatedSprite2D.flip_h = false
 	if progress_ratio == 1:

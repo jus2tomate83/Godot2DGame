@@ -26,3 +26,5 @@ script = ExtResource("1_0xe8w")
 
 [node name="Pnj" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
 position = Vector2(1.65117, -0.66133)
+
+[editable path="Path2D/CharacterFollower2D/Pnj"]
