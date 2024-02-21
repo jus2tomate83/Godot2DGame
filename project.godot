@@ -46,3 +46,5 @@ jump={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+global_illumination/voxel_gi/quality=1
+camera/depth_of_field/depth_of_field_bokeh_quality=3

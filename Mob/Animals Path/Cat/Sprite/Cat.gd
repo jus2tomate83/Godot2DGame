@@ -1,5 +1,4 @@
 extends Sprite2D
-var last_position
 
-func _process(delta):
+func _physics_process(delta):
 	$AnimatedSprite2D.play("Run")
