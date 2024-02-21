@@ -52,12 +52,12 @@ scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_dxvot")
 animation = &"Droite"
 
+[node name="Telephone" parent="AnimatedSprite2D" instance=ExtResource("3_seejr")]
+texture_filter = 1
+position = Vector2(4.89292, 2.80543)
+scale = Vector2(1.50552, 3.35259)
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
 scale = Vector2(1.63, 1.63)
 shape = SubResource("RectangleShape2D_g47na")
-
-[node name="Telephone" parent="." instance=ExtResource("3_seejr")]
-texture_filter = 1
-position = Vector2(7.97546, 4.57285)
-scale = Vector2(2.45399, 5.46472)
