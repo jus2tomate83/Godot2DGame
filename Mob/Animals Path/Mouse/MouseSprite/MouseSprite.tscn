@@ -107,4 +107,3 @@ script = ExtResource("1_13r0c")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_12sdn")
 animation = &"Idle"
-frame_progress = 0.371186

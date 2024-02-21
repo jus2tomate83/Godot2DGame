@@ -23,5 +23,6 @@ script = ExtResource("1_7qur3")
 
 [node name="AnimatedSprite2D" parent="Path2D/PathFollow2D/MouseSprite" index="0"]
 scale = Vector2(2.765, 2.765)
+frame_progress = 0.517619
 
 [editable path="Path2D/PathFollow2D/MouseSprite"]
