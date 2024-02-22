@@ -19,7 +19,7 @@ curve = SubResource("Curve2D_u5qxa")
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2(322, 161)
 script = ExtResource("1_wa474")
-idle_cat = true
+Cat_box = true
 
 [node name="Cat" parent="Path2D/PathFollow2D" instance=ExtResource("2_s16n0")]
 script = ExtResource("3_276mw")
@@ -27,6 +27,5 @@ script = ExtResource("3_276mw")
 [node name="AnimatedSprite2D" parent="Path2D/PathFollow2D/Cat" index="0"]
 scale = Vector2(2.57, 2.57)
 animation = &"Idle"
-frame_progress = 0.0
 
 [editable path="Path2D/PathFollow2D/Cat"]

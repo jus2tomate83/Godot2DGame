@@ -1,7 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://brdtktd1qdqs5"]
+[gd_scene load_steps=19 format=3 uid="uid://brdtktd1qdqs5"]
 
 [ext_resource type="Texture2D" uid="uid://csdkyfmbxdnwe" path="res://Assets/Assets_Character/Animals/Cat/WhiteCatIdle.png" id="1_1vfc0"]
+[ext_resource type="Texture2D" uid="uid://dkoqtpw0t1bqc" path="res://Assets/Assets_Character/Animals/Cat/box.png" id="1_sryvx"]
 [ext_resource type="Texture2D" uid="uid://bc8okalb7ikb7" path="res://Assets/Assets_Character/Animals/Cat/WhiteCatRun.png" id="2_r3vn8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoh2i"]
+atlas = ExtResource("1_sryvx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ormuv"]
+atlas = ExtResource("1_sryvx")
+region = Rect2(0, 32, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ooyvn"]
 atlas = ExtResource("1_1vfc0")
@@ -53,6 +62,17 @@ region = Rect2(0, 160, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0qrwn"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoh2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ormuv")
+}],
+"loop": true,
+"name": &"CatBox",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ooyvn")
@@ -107,5 +127,4 @@ texture_filter = 1
 texture_filter = 1
 scale = Vector2(4.095, 4.095)
 sprite_frames = SubResource("SpriteFrames_0qrwn")
-animation = &"Run"
-frame_progress = 0.256112
+animation = &"CatBox"
