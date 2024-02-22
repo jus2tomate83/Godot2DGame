@@ -10,15 +10,24 @@ var Mouse_pos_start
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Mouse_pos_start =$Cat/AnimatedSprite2D.position
-
+	
+func CatBox():
+	$MouseSprite/AnimatedSprite2D.play("CatBox")
+	
+func CatIdle():
+	$MouseSprite/AnimatedSprite2D.play("Idle")
+	
+func CatRun():
+	$MouseSprite/AnimatedSprite2D.play("Run")
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if idle_cat == true:
-		$Cat/AnimatedSprite2D.play("Idle")
+		CatIdle()
 	if Cat_box == true:
-		$Cat/AnimatedSprite2D.play("CatBox")
+		CatBox()
 	if idle_cat == false and Cat_box == false:
-		$Cat/AnimatedSprite2D.play("Run")
+		CatRun()
 		last_position = position[0]
 		set_progress(get_progress() + runSpeed*delta)
 		if position[0] < last_position:

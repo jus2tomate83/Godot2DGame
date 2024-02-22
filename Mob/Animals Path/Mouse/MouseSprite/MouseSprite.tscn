@@ -1,8 +1,29 @@
-[gd_scene load_steps=17 format=3 uid="uid://boi4fly0bce61"]
+[gd_scene load_steps=23 format=3 uid="uid://boi4fly0bce61"]
 
 [ext_resource type="Script" path="res://Mob/Animals Path/Mouse/MouseSprite/MouseSprite.gd" id="1_13r0c"]
 [ext_resource type="Texture2D" uid="uid://cwy170cmj2qf6" path="res://Assets/Assets_Character/Animals/Mouse/MouseIdle.png" id="2_h2ti8"]
+[ext_resource type="Texture2D" uid="uid://dqrc83yllr2pg" path="res://Assets/Assets_Character/Animals/Mouse/MouseEat.png" id="2_mrtlb"]
 [ext_resource type="Texture2D" uid="uid://bkyau1nwsxacq" path="res://Assets/Assets_Character/Animals/Mouse/MouseRun.png" id="3_dvkuf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_llh11"]
+atlas = ExtResource("2_mrtlb")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_to1xo"]
+atlas = ExtResource("2_mrtlb")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_676mv"]
+atlas = ExtResource("2_mrtlb")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fn7qc"]
+atlas = ExtResource("2_mrtlb")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhkcl"]
+atlas = ExtResource("2_mrtlb")
+region = Rect2(0, 128, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7jbb"]
 atlas = ExtResource("2_h2ti8")
@@ -56,6 +77,26 @@ region = Rect2(0, 160, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_llh11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_to1xo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_676mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fn7qc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhkcl")
+}],
+"loop": true,
+"name": &"Eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_n7jbb")
 }, {
 "duration": 1.0,
@@ -98,7 +139,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="MouseSprite" type="Sprite2D"]
@@ -106,4 +147,4 @@ script = ExtResource("1_13r0c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_12sdn")
-animation = &"Idle"
+animation = &"Run"
