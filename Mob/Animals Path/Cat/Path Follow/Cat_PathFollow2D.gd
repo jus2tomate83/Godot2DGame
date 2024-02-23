@@ -12,13 +12,13 @@ func _ready():
 	Mouse_pos_start =$Cat/AnimatedSprite2D.position
 	
 func CatBox():
-	$MouseSprite/AnimatedSprite2D.play("CatBox")
+	$Cat/AnimatedSprite2D.play("CatBox")
 	
 func CatIdle():
-	$MouseSprite/AnimatedSprite2D.play("Idle")
+	$Cat/AnimatedSprite2D.play("Idle")
 	
 func CatRun():
-	$MouseSprite/AnimatedSprite2D.play("Run")
+	$Cat/AnimatedSprite2D.play("Run")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

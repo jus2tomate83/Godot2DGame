@@ -26,6 +26,5 @@ script = ExtResource("3_276mw")
 
 [node name="AnimatedSprite2D" parent="Path2D/PathFollow2D/Cat" index="0"]
 scale = Vector2(2.57, 2.57)
-animation = &"Idle"
 
 [editable path="Path2D/PathFollow2D/Cat"]
