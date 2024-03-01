@@ -5,7 +5,7 @@ var last_position
 var tel_pos_start
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	tel_pos_start = $Pnj/AnimatedSprite2D/Telephone.position
+	tel_pos_start = $Pnj/AnimatedSprite2D/Telephone.position[0]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

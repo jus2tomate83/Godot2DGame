@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://qoejkjew43r4"]
+[gd_scene load_steps=5 format=3 uid="uid://qoejkjew43r4"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjPathFollow/CharacterFollower2D.gd" id="2_04cn2"]
 [ext_resource type="PackedScene" uid="uid://87xgskjsoi1p" path="res://Mob/Pnj/PnjSprite/Pnj.tscn" id="3_em2no"]
+[ext_resource type="PackedScene" uid="uid://bcgeppttxne2n" path="res://Mob/Pnj/PnjPathFollow/Pnj_PathFollow.tscn" id="3_t2u38"]
 
 [sub_resource type="Curve2D" id="Curve2D_r5amc"]
 _data = {
@@ -28,3 +29,12 @@ script = ExtResource("2_04cn2")
 [node name="Node2D" parent="Pnj/Path2D/CharacterFollower2D" instance=ExtResource("3_em2no")]
 position = Vector2(0.943479, 0.343032)
 rotation = 4.26384
+
+[node name="Pnj2" parent="." instance=ExtResource("3_t2u38")]
+
+[node name="CharacterFollower2D" parent="Pnj2/Path2D" index="0"]
+position = Vector2(281.167, 254.204)
+
+[editable path="Pnj/Path2D/CharacterFollower2D/Node2D"]
+[editable path="Pnj2"]
+[editable path="Pnj2/Path2D/CharacterFollower2D/Pnj"]
