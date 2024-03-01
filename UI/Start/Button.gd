@@ -1,5 +1,4 @@
 extends Button
-var start = preload("res://UI/Start/Start.tscn")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -10,6 +9,7 @@ func _process(delta):
 
 
 func _on_pressed():
-	var instance = start.instantiate()
-	add_child(instance)
 	print("Start ...")
+	get_tree().change_scene_to_file("res://Monde/Pnj/PnjMonde.tscn")
+	print("Start LAUNCHED")
+	
