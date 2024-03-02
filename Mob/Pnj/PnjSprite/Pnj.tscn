@@ -50,7 +50,7 @@ script = ExtResource("1_0wt4j")
 scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_dxvot")
 animation = &"Droite"
-frame_progress = 0.721987
+frame_progress = 0.273071
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)

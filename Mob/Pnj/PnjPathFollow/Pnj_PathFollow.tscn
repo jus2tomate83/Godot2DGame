@@ -6,9 +6,9 @@
 [sub_resource type="Curve2D" id="Curve2D_2es0i"]
 bake_interval = 0.01
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 199, 233, 0, 0, 0, 0, 416, 289, 0, 0, 0, 0, 415, 286, 0, 0, 0, 0, 197, 230, 0, 0, 0, 0, 508, 301, 0, 0, 0, 0, 657, 291, 0, 0, 0, 0, 418, 285)
+"points": PackedVector2Array(0, 0, 0, 0, 202, 232, 0, 0, 0, 0, 934, 225, 0, 0, 0, 0, 203, 231)
 }
-point_count = 7
+point_count = 3
 
 [node name="Pnj" type="Node2D"]
 
@@ -18,7 +18,7 @@ curve = SubResource("Curve2D_2es0i")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
 texture_filter = 1
-position = Vector2(281.167, 254.204)
+position = Vector2(286.855, 231.189)
 progress = 84.8594
 rotates = false
 loop = false

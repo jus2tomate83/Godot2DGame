@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bv5yd02c1bne5"]
+
+[node name="Option" type="Control"]
+z_index = -1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lumen" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 78.0
+offset_right = 233.0
+offset_bottom = 109.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Lumen"]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 2.0
+offset_right = 290.0
+offset_bottom = 42.0
+text = "Lumen
+"
+
+[node name="ColorRect" type="ColorRect" parent="Lumen"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = -5.0
+offset_right = 320.0
+offset_bottom = 35.0
