@@ -2,7 +2,7 @@ extends PathFollow2D
 var velocity = Vector2.ZERO
 @export var runSpeed = 300
 var last_position
-
+var walking
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass
@@ -15,6 +15,7 @@ func _process(delta):
 		$Pnj/AnimatedSprite2D.flip_h = true
 	if position[0] > last_position:
 		$Pnj/AnimatedSprite2D.flip_h = false
+	
 	if progress_ratio == 1:
 		while progress_ratio != 0:
 				set_progress(get_progress() - runSpeed*delta)

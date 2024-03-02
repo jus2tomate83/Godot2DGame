@@ -27,4 +27,6 @@ script = ExtResource("1_0xe8w")
 [node name="Pnj" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
 position = Vector2(1.65117, -0.66133)
 
+[connection signal="sprite_frames_changed" from="Path2D/CharacterFollower2D/Pnj/AnimatedSprite2D" to="Path2D/CharacterFollower2D/Pnj" method="_on_animated_sprite_2d_sprite_frames_changed"]
+
 [editable path="Path2D/CharacterFollower2D/Pnj"]
