@@ -3,9 +3,10 @@ var velocity = Vector2.ZERO
 @export var runSpeed = 300
 var last_position
 var tel_pos_start
+var tel_pos_start_pos
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	tel_pos_start = $Node2D/AnimatedSprite2D/Telephone.position[0]
+	tel_pos_start = get_node(".")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

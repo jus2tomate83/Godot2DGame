@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cj2brs1equcqf"]
-
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_b7sxp"]
-
-[node name="Telephone" type="Sprite2D"]
-texture = SubResource("AnimatedTexture_b7sxp")

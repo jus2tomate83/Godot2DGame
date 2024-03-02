@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://87xgskjsoi1p"]
+[gd_scene load_steps=9 format=3 uid="uid://87xgskjsoi1p"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/PNJ.gd" id="1_0wt4j"]
 [ext_resource type="Texture2D" uid="uid://dt5hynfiwogm8" path="res://Assets/Assets_Character/Pnj/Pnj/Sprites/Prototype/Prototype_Worksheet.png" id="2_6fpsq"]
-[ext_resource type="PackedScene" uid="uid://cj2brs1equcqf" path="res://Mob/Pnj/Telephone/Telephone.tscn" id="3_seejr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w177s"]
 atlas = ExtResource("2_6fpsq")
@@ -37,7 +36,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Droite",
-"speed": 5.0
+"speed": 3.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g47na"]
@@ -51,11 +50,7 @@ script = ExtResource("1_0wt4j")
 scale = Vector2(1.63, 1.63)
 sprite_frames = SubResource("SpriteFrames_dxvot")
 animation = &"Droite"
-
-[node name="Telephone" parent="AnimatedSprite2D" instance=ExtResource("3_seejr")]
-texture_filter = 1
-position = Vector2(4.89292, 2.80543)
-scale = Vector2(1.50552, 3.35259)
+frame_progress = 0.721987
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 7)
