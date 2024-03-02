@@ -34,5 +34,14 @@ offset_top = 4.0
 offset_right = 144.0
 offset_bottom = 20.0
 
+[node name="Controle" type="Button" parent="."]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 22.0
+offset_right = 912.0
+offset_bottom = 64.0
+text = "Controle
+"
+
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="RichTextLabel/Volume" to="." method="_on_volume_value_changed"]
