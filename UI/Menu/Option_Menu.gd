@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://UI/Menu.tscn")
+	get_tree().change_scene_to_file("res://UI/Menu/Menu.tscn")
 
 
 func _on_volume_value_changed(value):

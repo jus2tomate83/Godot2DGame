@@ -19,12 +19,20 @@ offset_right = 1127.0
 offset_bottom = 140.0
 text = "Back"
 
-[node name="Volume" type="HSlider" parent="."]
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 2
-offset_left = 14.0
-offset_top = -1.0
-offset_right = 173.0
-offset_bottom = 41.0
+offset_left = 71.0
+offset_top = 47.0
+offset_right = 198.0
+offset_bottom = 81.0
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="RichTextLabel"]
+layout_mode = 2
+offset_left = 67.0
+offset_top = 4.0
+offset_right = 144.0
+offset_bottom = 20.0
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="RichTextLabel/Volume" to="." method="_on_volume_value_changed"]

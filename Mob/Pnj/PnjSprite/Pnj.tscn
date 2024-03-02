@@ -60,3 +60,4 @@ shape = SubResource("RectangleShape2D_g47na")
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_far7g")
+autoplay = true
