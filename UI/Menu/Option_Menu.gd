@@ -17,3 +17,7 @@ func _on_back_pressed():
 
 func _on_volume_value_changed(value):
 	pass # Replace with function body.
+
+
+func _on_controle_pressed():
+	get_tree().change_scene_to_file("res://UI/Controles/Controle.tscn")
