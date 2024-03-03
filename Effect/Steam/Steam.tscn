@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kkttin7gan4"]
+
+[ext_resource type="Texture2D" uid="uid://c8c38kfie36uo" path="res://Assets/Effect/Steam/smoke.png" id="1_m2nr1"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2ab67"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="Steam" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+process_material = SubResource("ParticleProcessMaterial_2ab67")
+texture = ExtResource("1_m2nr1")

@@ -14,6 +14,5 @@ func _process(delta):
 func _on_back_pressed():
 	play()
 
-
 func _on_controle_pressed():
 	play()
