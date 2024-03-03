@@ -1,9 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkdw00abgywph"]
+[gd_scene load_steps=16 format=3 uid="uid://bkdw00abgywph"]
 
 [ext_resource type="Script" path="res://Mob/Player/Player_Script.gd" id="1_4yri8"]
 [ext_resource type="Texture2D" uid="uid://bscy5wksj5oka" path="res://Assets/Assets_Character/Player/idle.png" id="1_angme"]
 [ext_resource type="Texture2D" uid="uid://ckkgpxhg4mecw" path="res://Assets/Assets_Character/Player/run.png" id="2_egqc1"]
 [ext_resource type="Script" path="res://Mob/Player/Camera2D.gd" id="4_xncew"]
+[ext_resource type="PackedScene" uid="uid://bnfa2o7fklbbq" path="res://Items/Weapon/Pistolet/Pistolet.tscn" id="5_pwjel"]
+[ext_resource type="Script" path="res://Items/Weapon/Pistolet/Pistolet.gd" id="6_4w0xu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_quiyl"]
 atlas = ExtResource("1_angme")
@@ -87,3 +89,11 @@ shape = SubResource("RectangleShape2D_6732i")
 zoom = Vector2(1.275, 1.275)
 position_smoothing_enabled = true
 script = ExtResource("4_xncew")
+
+[node name="Hand" type="Marker2D" parent="."]
+position = Vector2(4, 6)
+scale = Vector2(0.295, 0.295)
+
+[node name="Pistolet" parent="Hand" instance=ExtResource("5_pwjel")]
+scale = Vector2(3.38983, 3.38983)
+script = ExtResource("6_4w0xu")

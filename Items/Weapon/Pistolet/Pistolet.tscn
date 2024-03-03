@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnfa2o7fklbbq"]
+
+[ext_resource type="Texture2D" uid="uid://nr6l3vqfcwgg" path="res://Assets/Assets_Item/Pistolet.png" id="1_k62q1"]
+
+[node name="Pistolet" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, -3)
+texture = ExtResource("1_k62q1")
