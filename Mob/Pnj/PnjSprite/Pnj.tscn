@@ -49,14 +49,14 @@ scale = Vector2(1.63, 1.63)
 script = ExtResource("1_0wt4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1.63, 1.63)
+scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_dxvot")
 animation = &"Droite"
 frame_progress = 0.273071
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 7)
-scale = Vector2(1.63, 1.63)
+position = Vector2(0.05, 1.435)
+scale = Vector2(0.545, 0.545)
 shape = SubResource("RectangleShape2D_g47na")
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="."]

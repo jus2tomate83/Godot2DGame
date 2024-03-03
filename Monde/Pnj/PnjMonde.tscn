@@ -1,10 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://qoejkjew43r4"]
+[gd_scene load_steps=2 format=3 uid="uid://qoejkjew43r4"]
 
-[ext_resource type="PackedScene" uid="uid://d4kkttin7gan4" path="res://Effect/Steam/Steam.tscn" id="2_h8gmq"]
 [ext_resource type="PackedScene" uid="uid://bcgeppttxne2n" path="res://Mob/Pnj/PnjPathFollow/Pnj_PathFollow.tscn" id="3_t2u38"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Pnj" parent="." instance=ExtResource("3_t2u38")]
-
-[node name="Fog" parent="." instance=ExtResource("2_h8gmq")]

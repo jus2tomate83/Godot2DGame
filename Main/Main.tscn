@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://bf84ouxpxc2hh"]
+
+[ext_resource type="PackedScene" uid="uid://qoejkjew43r4" path="res://Monde/Pnj/PnjMonde.tscn" id="1_jes80"]
+[ext_resource type="PackedScene" uid="uid://bkdw00abgywph" path="res://Mob/Player/Player_Scène.tscn" id="2_n5568"]
+[ext_resource type="PackedScene" uid="uid://d4kkttin7gan4" path="res://Effect/Steam/Steam.tscn" id="3_r4lpc"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_jes80")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_n5568")]
+
+[node name="Fog" parent="." instance=ExtResource("3_r4lpc")]

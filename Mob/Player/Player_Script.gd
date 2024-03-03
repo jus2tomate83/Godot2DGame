@@ -1,12 +1,9 @@
 extends CharacterBody2D
-@export var SPEED = 200
 
-var screen_size = get_viewport_rect().size
-var direction = Vector2.ZERO
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+const SPEED = 200
 const JUMP_VELOCITY = -200
 
-
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
 	var direction = Input.get_axis("gauche", "droite")
@@ -22,9 +19,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-	if velocity.length() > 0 and is_on_floor() :
-		$AnimatedSprite2D.flip_h= velocity.x < 0
-
+	if velocity.length() > 0 and is_on_floor():
+		$AnimatedSprite2D.flip_h = velocity.x < 0
 		$AnimatedSprite2D.play("run")
-	else :
+	else:
 		$AnimatedSprite2D.play("idle")

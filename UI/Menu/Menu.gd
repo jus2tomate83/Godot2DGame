@@ -3,7 +3,7 @@ extends Control
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Monde/Pnj/PnjMonde.tscn")
+	get_tree().change_scene_to_file("res://Main/Main.tscn")
 
 
 func _on_option_pressed():
