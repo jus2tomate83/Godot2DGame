@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjvjuqbxd3eid"]
+[gd_scene load_steps=3 format=3 uid="uid://cjvjuqbxd3eid"]
 
 [ext_resource type="Script" path="res://UI/Controles/Controle.gd" id="1_ge1dq"]
+[ext_resource type="AudioStream" uid="uid://cj4cdvglquba" path="res://Assets/Sounds/foot-step-snow-4-189865.mp3" id="2_jwnxg"]
 
 [node name="Controle" type="Control"]
 layout_mode = 3
@@ -9,6 +10,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jwnxg")
+pitch_scale = 2.85
+attenuation = 0.466516
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -19,7 +25,7 @@ offset_bottom = 45.0
 text = "Avancer"
 script = ExtResource("1_ge1dq")
 
-[node name="LineEdit" type="LineEdit" parent="Label"]
+[node name="Right" type="LineEdit" parent="Label"]
 layout_mode = 0
 offset_left = 72.0
 offset_top = -8.0
@@ -27,18 +33,17 @@ offset_right = 139.063
 offset_bottom = 23.0
 scale = Vector2(1.40239, 1.12785)
 mouse_default_cursor_shape = 3
-text = "d"
 max_length = 1
 selecting_enabled = false
 drag_and_drop_selection_enabled = false
 
 [node name="Back" type="Button" parent="."]
+layout_mode = 0
 offset_left = 956.0
 offset_top = 19.0
 offset_right = 1127.0
 offset_bottom = 140.0
 text = "Back"
 
-[connection signal="text_changed" from="Label/LineEdit" to="Label" method="_on_line_edit_text_changed"]
-[connection signal="text_submitted" from="Label/LineEdit" to="Label" method="_on_line_edit_text_submitted"]
+[connection signal="text_submitted" from="Label/Right" to="Label" method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Back" to="Label" method="_on_back_pressed"]

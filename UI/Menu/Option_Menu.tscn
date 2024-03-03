@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bo6fanmfn38vg"]
+[gd_scene load_steps=4 format=3 uid="uid://bo6fanmfn38vg"]
 
 [ext_resource type="Script" path="res://UI/Menu/Option_Menu.gd" id="1_u0k0p"]
+[ext_resource type="AudioStream" uid="uid://cj4cdvglquba" path="res://Assets/Sounds/foot-step-snow-4-189865.mp3" id="2_846o6"]
+[ext_resource type="Script" path="res://UI/Menu/Clik.gd" id="3_fb78r"]
 
 [node name="Menue" type="Control"]
 layout_mode = 3
@@ -10,6 +12,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_u0k0p")
+
+[node name="Clik" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_846o6")
+pitch_scale = 4.95
+script = ExtResource("3_fb78r")
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 2
@@ -44,5 +51,7 @@ text = "Controle
 "
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Back" to="Clik" method="_on_back_pressed"]
 [connection signal="value_changed" from="RichTextLabel/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="pressed" from="Controle" to="." method="_on_controle_pressed"]
+[connection signal="pressed" from="Controle" to="Clik" method="_on_controle_pressed"]

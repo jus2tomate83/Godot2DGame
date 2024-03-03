@@ -1,27 +1,19 @@
 extends Label
-@export var avancer := str("") 
 
+@export var right : String = ""
+@onready var Right = $Right
+@onready var walk_sound = $"../AudioStreamPlayer2D"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
-
-
-
-
-
 func _on_line_edit_text_submitted(new_text):
-	avancer = $LineEdit.text
-
-
+	right = Right.text
+	print(right)
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://UI/Menu/Option_Menu.tscn")
-
-
-func _on_line_edit_text_changed(new_text):
-	avancer = $LineEdit.text
+	walk_sound.play()

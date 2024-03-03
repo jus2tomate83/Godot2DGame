@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://87xgskjsoi1p"]
+[gd_scene load_steps=11 format=3 uid="uid://87xgskjsoi1p"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/PNJ.gd" id="1_0wt4j"]
 [ext_resource type="Texture2D" uid="uid://dt5hynfiwogm8" path="res://Assets/Assets_Character/Pnj/Pnj/Sprites/Prototype/Prototype_Worksheet.png" id="2_6fpsq"]
 [ext_resource type="AudioStream" uid="uid://cj4cdvglquba" path="res://Assets/Sounds/foot-step-snow-4-189865.mp3" id="3_far7g"]
+[ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/Walk.gd" id="4_rj67h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w177s"]
 atlas = ExtResource("2_6fpsq")
@@ -60,4 +61,10 @@ shape = SubResource("RectangleShape2D_g47na")
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_far7g")
-autoplay = true
+volume_db = 16.276
+pitch_scale = 4.0
+script = ExtResource("4_rj67h")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="Walk" method="_on_timer_timeout"]
