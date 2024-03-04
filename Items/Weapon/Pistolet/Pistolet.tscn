@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnfa2o7fklbbq"]
+[gd_scene load_steps=3 format=3 uid="uid://bnfa2o7fklbbq"]
 
 [ext_resource type="Texture2D" uid="uid://nr6l3vqfcwgg" path="res://Assets/Assets_Item/Pistolet.png" id="1_k62q1"]
+[ext_resource type="Script" path="res://Items/Weapon/Pistolet/Pistolet.gd" id="1_w4efa"]
 
 [node name="Pistolet" type="Node2D"]
+script = ExtResource("1_w4efa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7, -3)
