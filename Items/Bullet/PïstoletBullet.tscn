@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://blkc18btwyqsg"]
+[gd_scene load_steps=4 format=3 uid="uid://blkc18btwyqsg"]
 
-[node name="PïstoletBullet" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bxqjqhtedc1yj" path="res://Assets/Assets_Item/Bullet.png" id="1_45pgs"]
+[ext_resource type="Script" path="res://Items/Bullet/PïstoletBullet.gd" id="1_rmwb4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hy2eq"]
+radius = 2.0
+
+[node name="GunBullet" type="Area2D"]
+rotation = 0.785398
+scale = Vector2(1.055, 1.055)
+script = ExtResource("1_rmwb4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.785398
+texture = ExtResource("1_45pgs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.670244, 0.670244)
+rotation = 0.785398
+shape = SubResource("CircleShape2D_hy2eq")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-2.68097, 2.68097)
+rotation = 0.785398
+scale = Vector2(0.212549, 0.436469)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

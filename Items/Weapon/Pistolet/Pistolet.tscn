@@ -3,9 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://nr6l3vqfcwgg" path="res://Assets/Assets_Item/Pistolet.png" id="1_k62q1"]
 [ext_resource type="Script" path="res://Items/Weapon/Pistolet/Pistolet.gd" id="1_w4efa"]
 
-[node name="Pistolet" type="Node2D"]
+[node name="gun" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_w4efa")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(7, -3)
+position = Vector2(2, -3)
 texture = ExtResource("1_k62q1")
+
+[node name="BulletSpawn" type="Marker2D" parent="."]
+position = Vector2(8, -1)

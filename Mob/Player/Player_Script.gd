@@ -3,20 +3,21 @@ extends CharacterBody2D
 const SPEED = 250
 const JUMP_VELOCITY = -200
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var nbr_pistol = 0
 func _ready():
 	gravity = 0
 
 func equip():
 	var pistol = preload("res://Items/Weapon/Pistolet/Pistolet.tscn").instantiate()
-	if Input.is_action_just_pressed('Equiper'):
-		$"AnimatedSprite2D".add_child(pistol)
-		print("Equipé !")
-	
+	$Hand.add_child(pistol)
+	nbr_pistol += 1
+	print("Equipé !")
+
 
 func _physics_process(delta):
-	equip()
+	if Input.is_action_just_pressed('Equiper') and nbr_pistol < 1:
+		equip()
 	var direction = Input.get_axis("gauche", "droite")
-	print(gravity)
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if Input.is_action_just_pressed("jump") and is_on_floor():

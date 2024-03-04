@@ -61,8 +61,9 @@ shape = SubResource("RectangleShape2D_g47na")
 
 [node name="Walk" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_far7g")
-volume_db = 16.276
+volume_db = -10.799
 pitch_scale = 4.0
+attenuation = 0.784582
 script = ExtResource("4_rj67h")
 
 [node name="Timer" type="Timer" parent="."]
