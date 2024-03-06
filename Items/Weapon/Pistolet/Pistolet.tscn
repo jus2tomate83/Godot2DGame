@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnfa2o7fklbbq"]
+[gd_scene load_steps=5 format=3 uid="uid://bnfa2o7fklbbq"]
 
 [ext_resource type="Texture2D" uid="uid://nr6l3vqfcwgg" path="res://Assets/Assets_Item/Pistolet.png" id="1_k62q1"]
 [ext_resource type="Script" path="res://Items/Weapon/Pistolet/Pistolet.gd" id="1_w4efa"]
+[ext_resource type="AudioStream" uid="uid://bpsr75lwumte8" path="res://Assets/Sounds/9mm-pistol-shot-6349.mp3" id="3_kxh57"]
+[ext_resource type="AudioStream" uid="uid://cj01wo6j1wrfw" path="res://Assets/Sounds/9mm chamber reload.mp3" id="4_lchjs"]
 
 [node name="gun" type="Node2D"]
 position = Vector2(1, 0)
@@ -13,3 +15,17 @@ texture = ExtResource("1_k62q1")
 
 [node name="BulletSpawn" type="Marker2D" parent="."]
 position = Vector2(8, -1)
+
+[node name="ShootSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kxh57")
+volume_db = -8.697
+pitch_scale = 1.66
+
+[node name="Chambre Reload" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_lchjs")
+volume_db = -8.697
+pitch_scale = 1.66
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

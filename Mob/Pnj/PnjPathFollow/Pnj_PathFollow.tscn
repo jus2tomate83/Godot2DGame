@@ -3,22 +3,20 @@
 [ext_resource type="Script" path="res://Mob/Pnj/PnjPathFollow/CharacterFollower2D.gd" id="1_0xe8w"]
 [ext_resource type="PackedScene" uid="uid://87xgskjsoi1p" path="res://Mob/Pnj/PnjSprite/Pnj.tscn" id="2_itf15"]
 
-[sub_resource type="Curve2D" id="Curve2D_2es0i"]
-bake_interval = 0.01
+[sub_resource type="Curve2D" id="Curve2D_p875c"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 202, 232, 0, 0, 0, 0, 934, 225, 0, 0, 0, 0, 203, 231)
+"points": PackedVector2Array(0, 0, 0, 0, 164, 52, 0, 0, 0, 0, 471, 66, 0, 0, 0, 0, 163, 53)
 }
 point_count = 3
 
 [node name="Pnj" type="Node2D"]
 
 [node name="Path2D" type="Path2D" parent="."]
-position = Vector2(-28, -100)
-curve = SubResource("Curve2D_2es0i")
+curve = SubResource("Curve2D_p875c")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
 texture_filter = 1
-position = Vector2(286.855, 231.189)
+position = Vector2(258.662, 137.778)
 progress = 84.8594
 rotates = false
 loop = false
@@ -27,6 +25,7 @@ script = ExtResource("1_0xe8w")
 [node name="Pnj" parent="Path2D/CharacterFollower2D" instance=ExtResource("2_itf15")]
 position = Vector2(1.65117, -0.66133)
 
+[connection signal="area_entered" from="Path2D/CharacterFollower2D/Pnj" to="Path2D/CharacterFollower2D" method="_on_pnj_area_entered"]
 [connection signal="sprite_frames_changed" from="Path2D/CharacterFollower2D/Pnj/AnimatedSprite2D" to="Path2D/CharacterFollower2D/Pnj" method="_on_animated_sprite_2d_sprite_frames_changed"]
 
 [editable path="Path2D/CharacterFollower2D/Pnj"]

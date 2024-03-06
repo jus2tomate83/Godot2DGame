@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://87xgskjsoi1p"]
+[gd_scene load_steps=16 format=3 uid="uid://87xgskjsoi1p"]
 
 [ext_resource type="Script" path="res://Mob/Pnj/PnjSprite/PNJ.gd" id="1_0wt4j"]
 [ext_resource type="Texture2D" uid="uid://dt5hynfiwogm8" path="res://Assets/Assets_Character/Pnj/Pnj/Sprites/Prototype/Prototype_Worksheet.png" id="2_6fpsq"]
@@ -21,6 +21,26 @@ region = Rect2(64, 128, 32, 32)
 atlas = ExtResource("2_6fpsq")
 region = Rect2(96, 128, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn2b2"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(32, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lnp7"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68r6s"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(0, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jpqg"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(32, 320, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gught"]
+atlas = ExtResource("2_6fpsq")
+region = Rect2(64, 320, 32, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dxvot"]
 animations = [{
 "frames": [{
@@ -39,20 +59,44 @@ animations = [{
 "loop": true,
 "name": &"Droite",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gn2b2")
+}],
+"loop": true,
+"name": &"Idle Mort",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lnp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68r6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jpqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gught")
+}],
+"loop": true,
+"name": &"mort",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g47na"]
 size = Vector2(10, 6)
 
-[node name="Pnj" type="CharacterBody2D"]
+[node name="Pnj" type="Area2D"]
 scale = Vector2(1.63, 1.63)
 script = ExtResource("1_0wt4j")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_dxvot")
-animation = &"Droite"
-frame_progress = 0.273071
+animation = &"Idle Mort"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.05, 1.435)
@@ -68,4 +112,5 @@ script = ExtResource("4_rj67h")
 
 [node name="Timer" type="Timer" parent="."]
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="Timer" to="Walk" method="_on_timer_timeout"]
