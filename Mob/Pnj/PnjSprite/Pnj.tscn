@@ -87,7 +87,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g47na"]
-size = Vector2(10, 6)
+size = Vector2(7.87978, 11.2614)
 
 [node name="Pnj" type="Area2D"]
 scale = Vector2(1.63, 1.63)
@@ -96,10 +96,10 @@ script = ExtResource("1_0wt4j")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.45, 0.45)
 sprite_frames = SubResource("SpriteFrames_dxvot")
-animation = &"Idle Mort"
+animation = &"Droite"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.05, 1.435)
+position = Vector2(-0.306748, 0.00125791)
 scale = Vector2(0.545, 0.545)
 shape = SubResource("RectangleShape2D_g47na")
 

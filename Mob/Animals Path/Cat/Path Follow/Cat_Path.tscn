@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://Mob/Animals Path/Cat/Sprite/Cat.gd" id="3_276mw"]
 
 [sub_resource type="Curve2D" id="Curve2D_u5qxa"]
+resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 322, 161, 0, 0, 0, 0, 843, 161, 0, 0, 0, 0, 321, 161)
 }
@@ -26,5 +27,8 @@ script = ExtResource("3_276mw")
 [node name="AnimatedSprite2D" parent="Path2D/PathFollow2D/Cat" index="0"]
 scale = Vector2(2.57, 2.57)
 animation = &"Run"
+frame_progress = 0.0
+
+[connection signal="area_entered" from="Path2D/PathFollow2D/Cat" to="Path2D/PathFollow2D" method="_on_cat_area_entered"]
 
 [editable path="Path2D/PathFollow2D/Cat"]

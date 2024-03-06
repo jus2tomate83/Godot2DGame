@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://boi4fly0bce61" path="res://Mob/Animals Path/Mouse/MouseSprite/MouseSprite.tscn" id="2_w7b3g"]
 
 [sub_resource type="Curve2D" id="Curve2D_xjr5l"]
+resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 331, 175, 0, 0, 0, 0, 636, 187, 0, 0, 0, 0, 330, 171)
 }

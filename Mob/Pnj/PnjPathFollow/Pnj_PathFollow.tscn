@@ -4,10 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://87xgskjsoi1p" path="res://Mob/Pnj/PnjSprite/Pnj.tscn" id="2_itf15"]
 
 [sub_resource type="Curve2D" id="Curve2D_p875c"]
+resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 164, 52, 0, 0, 0, 0, 471, 66, 0, 0, 0, 0, 163, 53)
+"points": PackedVector2Array(0, 0, 0, 0, 164, 52, 0, 0, 0, 0, 471, 66, 0, 0, 0, 0, 163, 53, 0, 0, 0, 0, 88, 281, 0, 0, 0, 0, 279, 197, 0, 0, 0, 0, 279, 197)
 }
-point_count = 3
+point_count = 6
 
 [node name="Pnj" type="Node2D"]
 
@@ -16,7 +17,7 @@ curve = SubResource("Curve2D_p875c")
 
 [node name="CharacterFollower2D" type="PathFollow2D" parent="Path2D"]
 texture_filter = 1
-position = Vector2(258.662, 137.778)
+position = Vector2(248.768, 55.8656)
 progress = 84.8594
 rotates = false
 loop = false
